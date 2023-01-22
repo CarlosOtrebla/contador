@@ -11,12 +11,13 @@ const contar = () => {
     let inicio = document.getElementById('idInicio').value
     let fim = document.getElementById('idFim').value
     let passo = document.getElementById('idPasso').value
-    let resultado =  document.getElementById('idResultado')
+    let resultado =  document.getElementById('idResultado').innerHTML
 
     verificaEntrada(inicio, 'idFaltouInicio')
     verificaEntrada(fim,'idFaltouFim')
     verificaEntrada(passo,'idFaltouPasso')
-
+    
+    
 
     
 }
