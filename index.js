@@ -2,26 +2,23 @@ const verificaEntrada = (entrada, id) => {
     if(entrada == ''){
         document.getElementById(id).innerHTML = 'preencha este campo.'
     }else {
-        document.getElementById('idFaltouInicio').innerHTML = ''
+        document.getElementById(id).innerHTML = ''
     }
 }
 
+let inicio = document.getElementById('idInicio')
+let fim = document.getElementById('idFim')
+let passo = document.getElementById('idPasso')
+let resultado =  document.getElementById('idResultado')
 
-const contar = () => {
-    let inicio = document.getElementById('idInicio').value
-    let fim = document.getElementById('idFim').value
-    let passo = document.getElementById('idPasso').value
-    let resultado =  document.getElementById('idResultado').innerHTML
-
-    verificaEntrada(inicio, 'idFaltouInicio')
-    verificaEntrada(fim,'idFaltouFim')
-    verificaEntrada(passo,'idFaltouPasso')
-    
-    
-
-    
+const contar = () => {  
+    verificaEntrada(inicio.value, 'idFaltouInicio')
+    verificaEntrada(fim.value,'idFaltouFim')
+    verificaEntrada(passo.value,'idFaltouPasso')
 }
 
-const mudou = (campo) => {
-    document.getElementById(campo).innerHTML = ''
+const mudou = (value, id) => {
+
+    verificaEntrada(value,id)
+
 }
