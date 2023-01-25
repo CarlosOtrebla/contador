@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer ></script>
 </head>
 <body>
     <header>
@@ -14,11 +15,17 @@
     <section>
         <div>
             <label for="idInicio">Início:</label>
-            <input type="number" name="inicio" id="idInicio" class="entrada" onchange="mudou('idFaltouInicio')"><label class="faltou" id="idFaltouInicio"></label><br>
+            <input type="number" name="inicio" id="idInicio" class="entrada" value="" onchange="mudou(value,'idFaltouInicio')">
+            <label class="faltou" id="idFaltouInicio"></label><br>
+
             <label for="idFim">Fim: </label>
-            <input type="number" name="fim" id="idFim" class="entrada" onchange="mudou('idFaltouFim')"><label class="faltou" id="idFaltouFim"></label><label class="faltou" id="idFaltouFim"></label><br>
+            <input type="number" name="fim" id="idFim" class="entrada" value="" on onchange="mudou(value,'idFaltouFim')">
+            <label class="faltou" id="idFaltouFim"></label><br>
+
             <label for="idPasso">Passo: </label>
-            <input type="number" name="passo" id="idPasso" class="entrada" onchange="mudou('idFaltouPasso')"><label class="faltou" id="idFaltouPasso"></label><br>
+            <input type="number" name="passo" id="idPasso" class="entrada" value="" onchange="mudou(value,'idFaltouPasso')">
+            <label class="faltou" id="idFaltouPasso"></label><br>
+
             <input type="button" value="CONTAR" id="idBtn" onclick="contar()">
             
         </div>
@@ -31,6 +38,6 @@
         Projeto em andamento...
     </footer>
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
 </body>
 </html>
